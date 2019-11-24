@@ -2,17 +2,13 @@ import React from "react";
 import AuthContext from "../auth-context";
 
 class Login extends React.Component {
+  static contextType = AuthContext;
+
   render() {
     return (
-      <AuthContext.Consumer>
-        {authContext => {
-          return (
-            <button onClick={authContext.toggleAuth}>
-              {authContext.isAuth ? "Logout" : "Login"}
-            </button>
-          );
-        }}
-      </AuthContext.Consumer>
+      <button onClick={this.context.toggleAuth}>
+        {this.context.isAuth ? "Logout" : "Login"}
+      </button>
     );
   }
 }
