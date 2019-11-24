@@ -1,8 +1,13 @@
 {
   "name": "ma9-contextapi",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "A very Simple demostration of Context API",
+  "keywords": [
+    "context-api",
+    "365codingphasechallenge",
+    "react",
+    "ma9code"
+  ],
   "main": "src/index.js",
   "dependencies": {
     "react": "16.8.6",

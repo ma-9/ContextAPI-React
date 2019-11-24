@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import "./styles.css";
 
-import App from './Components/App/App';
+import App from "./Components/App/App";
 
 function Index() {
   return (

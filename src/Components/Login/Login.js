@@ -1,9 +1,20 @@
 import React from "react";
+import AuthContext from "../auth-context";
 
-export default () => {
-  return (
-    <div>
-      <h1>Login File</h1>
-    </div>
-  );
-};
+class Login extends React.Component {
+  render() {
+    return (
+      <AuthContext.Consumer>
+        {authContext => {
+          return (
+            <button onClick={authContext.toggleAuth}>
+              {authContext.isAuth ? "Logout" : "Login"}
+            </button>
+          );
+        }}
+      </AuthContext.Consumer>
+    );
+  }
+}
+
+export default Login;
